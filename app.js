@@ -1,5 +1,5 @@
 var express = require('express');
-// var PORT = process.env.PORT = 3000;
+var PORT = process.env.PORT || 3000;
 var request = require('request');
 var bodyParser = require('body-parser');
 var app = express();
@@ -27,6 +27,6 @@ app.get("/result",function(req,res){
 
 
 // Listening to server at 3000
-app.listen(3000,function(){
+app.listen(PORT,function(){
     console.log("Server started ....");
 });
