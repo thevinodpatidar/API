@@ -1,8 +1,36 @@
- <% result["Search"].forEach(function(movie){ %>
+ <!-- <% result["Search"].forEach(function(movie){ %>
      <h1><%= movie["Title"] %></h1>
      <h3><%= movie["Year"] %></h3>
      <p><%= movie["Rated"] %></p>
      <img src="<%= movie['Poster'] %>" alt="">
-<% }) %>
+<% }) %> -->
+
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+        <% result["Search"].forEach(function(movie){ %>
+            <div class="col-md-4">
+                <div class="container m-5">
+                    <h6><%= movie["Title"] %></h6>
+                    <h5><%= movie["Year"] %></h5>
+                    <img class="img-thumbnail img-fluid" src="<%= movie['Poster'] %>" alt="">
+                </div>   
+                <div class="container m-5">
+                        <button type="button" class="btn btn-primary btn-block">More</button>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
 
 
+
+
+
+
+
+
+
+
+
+<% include partials/footer %>
