@@ -28,5 +28,5 @@ app.get("/result",function(req,res){
 
 // Listening to server at 3000
 app.listen(PORT,function(){
-    console.log("Server started ....");
+    console.log("Server started at 3000 ....");
 });
